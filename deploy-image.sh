@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
-ORG=swarmpit
-REPO=agent
+ORG=${ORG:-senseware}
+REPO=${REPO:-swarmpit-agent}
 NAMESPACE=$ORG/$REPO
 TAG=${TRAVIS_BRANCH/\//-}
 

@@ -1,6 +1,6 @@
 module github.com/swarmpit/agent
 
-go 1.12
+go 1.22
 
 require (
 	github.com/Microsoft/go-winio v0.4.12 // indirect

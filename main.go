@@ -3,12 +3,17 @@ package main
 import (
 	"log"
 	"net/http"
+
 	"github.com/docker/docker/client"
+	"github.com/swarmpit/agent/setup"
 	"github.com/swarmpit/agent/swarmpit"
 	"github.com/swarmpit/agent/swarmpit/task"
 )
 
 func main() {
+	version := setup.EnsureDockerAPIVersion()
+	log.Printf("INFO: Using Docker API version %s", version)
+
 	cli, err := client.NewEnvClient()
 	if err != nil {
 		log.Printf("ERROR: Docker client initialization failed.")
